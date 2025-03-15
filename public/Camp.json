@@ -1,0 +1,117 @@
+[
+    {
+      "campName": "Health First Wellness Camp",
+      "image": "https://i.ibb.co.com/4ZbJ9bs/1733017744-4102.jpg",
+      "campFees": 25.0,
+      "type": "popular",
+      "dateTime": "2025-02-15T09:00:00",
+      "location": "Community Center, Downtown",
+      "healthcareProfessional": "Dr. Sarah Johnson",
+      "description": "A comprehensive wellness camp focusing on general health check-ups, fitness tips, and diet consultations."
+    },
+    {
+      "campName": "Pediatric Care Camp",
+      "image": "https://i.ibb.co.com/dMqchZ2/coronavirus-sample-procedure.jpg",
+      "campFees": 15.0,
+      "type": "popular",
+      "dateTime": "2025-03-01T10:00:00",
+      "location": "City Park Pavilion",
+      "healthcareProfessional": "Dr. Emily Carter",
+      "description": "Specialized health check-ups and consultations for children aged 2-12."
+    },
+    {
+      "campName": "Cardio Health Check",
+      "image": "https://i.ibb.co.com/R2FB0QM/ems-paramedics-team-provide-medical-help-injured-patient-way-hospital-emergency-care-assistants-usin.jpg",
+      "campFees": 50.0,
+      "type": "popular",
+      "dateTime": "2025-02-20T08:00:00",
+      "location": "HeartCare Clinic, Uptown",
+      "healthcareProfessional": "Dr. Michael Brown",
+      "description": "Focused on heart health, offering ECG tests, blood pressure monitoring, and cardiology consultations."
+    },
+    {
+      "campName": "Diabetes Awareness Camp",
+      "image": "https://i.ibb.co.com/GPqYFNH/girl-patient-with-medical-protective-face-mask-against-coronavirus.jpg",
+      "campFees": 20.0,
+      "type": "popular",
+      "dateTime": "2025-02-28T09:30:00",
+      "location": "Greenfield Community Hall",
+      "healthcareProfessional": "Dr. Kevin Smith",
+      "description": "Raising awareness about diabetes with free glucose tests and nutritional advice."
+    },
+    {
+      "campName": "Women’s Health Workshop",
+      "image": "https://i.ibb.co.com/zfq4VpP/health.jpg",
+      "campFees": 30.0,
+      "type": "popular",
+      "dateTime": "2025-03-05T14:00:00",
+      "location": "Wellness Hub, Eastside",
+      "healthcareProfessional": "Dr. Lisa Fernandez",
+      "description": "A women-centric camp offering gynecological consultations, breast cancer screening, and overall health tips."
+    },
+    {
+      "campName": "Eye Care Camp",
+      "image": "https://i.ibb.co.com/PDwV8Hg/Health-Camp-41.webp",
+      "campFees": 10.0,
+      "type": "popular",
+      "dateTime": "2025-03-10T11:00:00",
+      "location": "Vision Center, South Avenue",
+      "healthcareProfessional": "Dr. Alan White",
+      "description": "Comprehensive eye check-ups, vision correction guidance, and cataract assessments."
+    },
+    {
+      "campName": "Orthopedic Consultation Camp",
+      "image": "https://i.ibb.co.com/RhGQ43X/Health-Camps-800.jpg",
+      "campFees": 35.0,
+      "dateTime": "2025-03-15T10:30:00",
+      "location": "FitLife Gym, Midtown",
+      "healthcareProfessional": "Dr. Rachel Green",
+      "description": "Focused on joint pain management, posture analysis, and bone health consultations."
+    },
+    {
+      "campName": "Mental Health Awareness Camp",
+      "image": "https://i.ibb.co.com/TtHcXxD/june-27-2021-poonch-jammu-and-kashmir-india-indian-army-organises-free-medical-camp-for-villagers-in.jpg",
+      "campFees": 30.0,
+      "dateTime": "2025-02-25T16:00:00",
+      "location": "Harmony Center, Westside",
+      "healthcareProfessional": "Dr. Stephen Taylor",
+      "description": "Promoting mental well-being with free counseling sessions and stress management workshops."
+    },
+    {
+      "campName": "Senior Citizen Health Check-up",
+      "image": "https://i.ibb.co.com/PYqgbY9/male-doctor-vaccinating-little-girl.jpg",
+      "campFees": 40.0,
+      "dateTime": "2025-03-20T09:00:00",
+      "location": "Golden Age Home, Downtown",
+      "healthcareProfessional": "Dr. Nancy Adams",
+      "description": "A tailored health camp for seniors, including arthritis care, hearing tests, and general check-ups."
+    },
+    {
+      "campName": "Skin Health Camp",
+      "image": "https://i.ibb.co.com/tDZV403/medical-camp-kampala-santegidio-2023-1.jpg",
+      "campFees": 20.0,
+      "dateTime": "2025-02-18T13:00:00",
+      "location": "DermCare Clinic, Midtown",
+      "healthcareProfessional": "Dr. Olivia Morgan",
+      "description": "Dedicated to skin health with free mole screenings, acne care tips, and general dermatology consultations."
+    },
+    {
+      "campName": "Fitness and Nutrition Camp",
+      "image": "https://i.ibb.co.com/2M83L4G/medical-nurse-helping-african-american-pediatrician-doctor-bandage-fractured-arm-little-kid-patient.jpg",
+      "campFees": 25.0,
+      "dateTime": "2025-03-08T12:00:00",
+      "location": "WellFit Arena, Eastside",
+      "healthcareProfessional": "Dr. Paul Harris",
+      "description": "A camp combining fitness assessments and personalized nutrition plans to help achieve health goals."
+    },
+    {
+      "campName": "Free Vaccination Camp",
+      "image": "https://i.ibb.co.com/sC81rXj/piron-guillaume-U4-Fy-Cp3-Kz-Y-unsplash.jpg",
+      "campFees": 40.0,
+      "dateTime": "2025-02-22T10:00:00",
+      "location": "Health & Wellness Center, Southside",
+      "healthcareProfessional": "Dr. Monica Blake",
+      "description": "Providing free vaccinations for children and adults as per national immunization guidelines."
+    }
+  ]
+  
