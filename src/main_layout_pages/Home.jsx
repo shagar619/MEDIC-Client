@@ -7,15 +7,15 @@ import DoctorsBanner from "../main_layout_components/DoctorsBanner";
 import ChooseUs from "../main_layout_components/ChooseUs";
 import Contact from "../main_layout_components/Contact";
 
+// bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')]
 
 const Home = () => {
     return (
-        <div className="">
+        <div className="bg-[#FFFFFF] bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')]">
 
             <Helmet>
                 <title>MEDIC | HOME</title>
             </Helmet>
-
             <CarouselBanner></CarouselBanner>
             <DoctorImg></DoctorImg>
             <PopularCamp></PopularCamp>

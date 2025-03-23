@@ -58,10 +58,10 @@ const SignIn = () => {
     }
 
     return (
-        <div className="bg-slate-100 py-12">
+        <div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] py-52">
 
             <div     
-            className="bg-cover  w-2/3 mx-auto my-32"
+            className="bg-cover object-cover w-4/5 md:w-3/5 mx-auto"
             style={{backgroundImage: "url('https://i.ibb.co.com/YyF9VqN/v870-tang-38.jpg')", boxShadow: '5px 5px 5px 5px rgba(0, 0, 0, 0.25)'}}>
 
             <Helmet>
@@ -70,12 +70,12 @@ const SignIn = () => {
 
 
             <div 
-            className="w-1/2 mx-auto py-12 lg:py-[300px]">
+            className="w-1/2 mx-auto py-24">
 
                 <div>
-                    <h3 className="text-blue-600 text-xl font-medium text-center mb-4 underline">Welcome Back!</h3>
+                    <h3 className="text-[#07332F] text-xl font-medium text-center mb-4 underline">Welcome Back!</h3>
                     <h1 className="text-4xl font-bold my-6 text-center text-[#007f5f]">Member Login</h1>
-                    <p className="text-base text-blue-600 font-normal text-center mb-12">Access to all features. No credit card required.</p>
+                    <p className="text-lg text-[#007f5f] font-normal text-center mb-12">Access to all features. No credit card required.</p>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -86,7 +86,7 @@ const SignIn = () => {
                         </div>
                         <input 
                         {...register("email", { required: true })}
-                        type="email" name="email" placeholder="Enter Your E-mail" className="input input-bordered w-full" />
+                        type="email" name="email" placeholder="Enter Your E-mail" className="input input-bordered w-full border-none rounded-sm" />
                         {errors.email && <span className="text-red-600">Email is required</span>}
                     </label>
 
@@ -96,7 +96,7 @@ const SignIn = () => {
                         </div>
                         <input 
                         {...register("password", { required: true })}
-                        type="password" name="password" placeholder="Enter Your Password" className="input input-bordered w-full" />
+                        type="password" name="password" placeholder="Enter Your Password" className="input input-bordered w-full border-none rounded-sm" />
                         {errors.email && <span className="text-red-600">Email is required</span>}
                     </label>
 
@@ -109,13 +109,13 @@ const SignIn = () => {
                         </div>
                         <input 
                         onBlur={handleValidateCaptcha}
-                        type="" name="captcha" placeholder="Type the captcha above" className="input input-bordered w-full" />
+                        type="" name="captcha" placeholder="Type the captcha above" className="input input-bordered w-full border-none rounded-sm" />
                     </label>
 
 
                     <input 
                     disabled={disabled}
-                    className="bg-[#3a86ff] btn text-xl font-bold text-white w-full py-2 mt-6 rounded cursor-pointer" type="submit" value="Login" />
+                    className="bg-[#07332F] btn text-xl font-bold text-white w-full py-2 mt-6 rounded-sm cursor-pointer" type="submit" value="Login" />
 
                     </form>
 

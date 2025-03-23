@@ -5,6 +5,7 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, PieChart, Pie, Legend
 import { IoWalletSharp } from "react-icons/io5";
 import { MdJoinFull } from "react-icons/md";
 import { Helmet } from "react-helmet-async";
+import useUser from "../hooks/useUser";
 
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
@@ -12,6 +13,7 @@ const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 const Analytics = () => {
 
     const { user } = useAuth();
+    const [participant] = useUser();
     const axiosSecure = useAxiosSecure();
 
     const { data: stats = [] } = useQuery({
@@ -42,7 +44,7 @@ const Analytics = () => {
 
 
     return (
-        <div className="pl-16 pt-12 pb-24 bg-slate-100">
+        <div className="pl-16 pt-12 pb-24 bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')]">
 
             <Helmet>
                 <title>MEDIC | DASHBOARD | USER | ANALYTICS</title>
@@ -51,7 +53,7 @@ const Analytics = () => {
             <h2 className="text-[#151515] text-5xl font-semibold my-12 uppercase">
                 <span>Hi, Welcome </span>
                 {
-                    user?.displayName || user.name ? user.displayName || user.name : "Back"
+                    participant?.displayName || participant.name ? participant.displayName || participant.name : "Back"
                 }
             </h2>
 

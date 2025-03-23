@@ -23,7 +23,9 @@ const GoogleLogin = () => {
         .then(result => {
             const userInfo = {
                 name: result.user?.displayName,
-                email: result.user?.email
+                email: result.user?.email,
+                photoURL: result.user.photoURL,
+                creationTime: result.user.metadata.creationTime
             }
 
             // sent user info in database
@@ -50,7 +52,7 @@ const GoogleLogin = () => {
         <div>
             <button 
                 onClick={handleSignInWithGoogle}
-                className="flex justify-center btn text-white items-center gap-4 border-none bg-[#3a86ff] w-full py-2 font-bold text-xl rounded-md mt-8 hover:text-blue-600"><FaGoogle className="text-orange-500"></FaGoogle>Sign Up With Google</button>
+                className="flex justify-center btn text-white items-center gap-4 border-none bg-[#07332F] w-full py-2 font-bold text-xl rounded-sm mt-8 hover:text-blue-600"><FaGoogle className="text-orange-500"></FaGoogle>Sign Up With Google</button>
         </div>
     );
 };

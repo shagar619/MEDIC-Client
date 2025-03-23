@@ -52,18 +52,23 @@ const JoinCamp = () => {
     }
 
     return (
+
+        <div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] py-52">
+
         <div 
-        className="w-10/12 mx-auto bg-cover my-44 py-32"
+        className="w-8/12 mx-auto bg-cover"
         style={{backgroundImage: "url('https://i.ibb.co.com/W5NjL44/login3.jpg')", boxShadow: '5px 5px 5px 5px rgba(0, 0, 0, 0.25)'}}>
 
             <Helmet>
                 <title>MEDIC | JOIN CAMP</title>
             </Helmet>
 
+            <div className="backdrop-blur-md py-32">
+
             <div className="w-7/12 mx-auto">
 
-            <h2 className="text-center text-5xl font-bold text-blue-700 uppercase">Join Our Medical Camps for Better Health Today!</h2>
-            <p className="text-center text-xl font-medium text-[#5aa9e6] my-12">Register now to secure your spot at our specialized medical camps. From health check-ups to expert consultations, take the first step towards a healthier you. It's quick, easy, and your wellness journey starts here!</p>
+            <h2 className="text-center text-4xl font-bold text-[#07332F] uppercase leading-[55px]">Join Our Medical Camps for Better Health Today!</h2>
+            <p className="text-center text-lg font-medium text-gray-700 my-12">Register now to secure your spot at our specialized medical camps. From health check-ups to expert consultations, take the first step towards a healthier you. It's quick, easy, and your wellness journey starts here!</p>
 
             <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -74,7 +79,7 @@ const JoinCamp = () => {
                     </div>
                     <input 
                     {...register("campName")}
-                    type="text" name="campName" value={campName} className="input input-bordered w-full" />
+                    type="text" name="campName" value={campName} className="input input-bordered w-full border-none rounded-sm" />
                 </label>
 
                 {/* Camp Fees */}
@@ -84,7 +89,7 @@ const JoinCamp = () => {
                     </div>
                     <input 
                     {...register("campFees")}
-                    type="number" name="campFees" value={campFees} className="input input-bordered w-full" />
+                    type="number" name="campFees" value={campFees} className="input input-bordered w-full border-none rounded-sm" />
                 </label>
 
                 {/* Location */}
@@ -94,7 +99,7 @@ const JoinCamp = () => {
                     </div>
                     <input 
                     {...register("location")}
-                    type="text" name="location" value={location} className="input input-bordered w-full" />
+                    type="text" name="location" value={location} className="input input-bordered w-full border-none rounded-sm" />
                 </label>
 
                 {/* Healthcare Professional */}
@@ -104,7 +109,7 @@ const JoinCamp = () => {
                     </div>
                     <input 
                     {...register("healthcareProfessional")}
-                    type="text" name="healthcareProfessional" value={healthcareProfessional} className="input input-bordered w-full" />
+                    type="text" name="healthcareProfessional" value={healthcareProfessional} className="input input-bordered w-full border-none rounded-sm" />
                 </label>
 
 
@@ -115,7 +120,7 @@ const JoinCamp = () => {
                     </div>
                     <input 
                     {...register("email")}
-                    type="email" name="email" value={user.email} className="input input-bordered w-full" />
+                    type="email" name="email" value={user.email} className="input input-bordered w-full border-none rounded-sm" />
                 </label>
 
                 {/* Participant Age */}
@@ -125,7 +130,7 @@ const JoinCamp = () => {
                     </div>
                     <input 
                     {...register("age", { required: true })}
-                    type="number" name="age" placeholder="Enter Your Age" className="input input-bordered w-full" />
+                    type="number" name="age" placeholder="Enter Your Age" className="input input-bordered w-full border-none rounded-sm" />
                     {errors.email && <span className="text-red-600">Age is required</span>}
                 </label>
 
@@ -136,7 +141,7 @@ const JoinCamp = () => {
                     </div>
                     <input 
                     {...register("phoneNumber", { required: true })}
-                    type="number" name="phoneNumber" placeholder="Enter Phone Number" className="input input-bordered w-full" />
+                    type="number" name="phoneNumber" placeholder="Enter Phone Number" className="input input-bordered w-full border-none rounded-sm" />
                     {errors.email && <span className="text-red-600">Phone Number is required</span>}
                 </label>
 
@@ -147,7 +152,7 @@ const JoinCamp = () => {
                     </div>
                     <select 
                     {...register("gender", { required: true })}
-                    defaultValue={'Select One'} name="gender" required className="select text-base font-normal text-gray-500 select-bordered w-full">
+                    defaultValue={'Select One'} name="gender" required className="select text-base font-normal text-gray-500 select-bordered w-full border-none rounded-sm">
                         <option disabled>Choose One</option>
                         <option>Male</option>
                         <option>Female</option>
@@ -162,18 +167,20 @@ const JoinCamp = () => {
                     </div>
                     <input 
                     {...register("emergencyContact", { required: true })}
-                    type="text" name="emergencyContact" placeholder="Enter Emergency Contact" className="input input-bordered w-full" />
+                    type="text" name="emergencyContact" placeholder="Enter Emergency Contact" className="input input-bordered w-full border-none rounded-sm" />
                     {errors.email && <span className="text-red-600">Emergency Contact is required</span>}
                 </label>
 
                 {/* Complete Registration */}
                 <input 
-                className="bg-[#3a86ff] btn border-none text-xl font-bold text-white w-full py-2 mt-6 rounded cursor-pointer" type="submit" value="Complete Registration" />
+                className="bg-[#07332F] btn border-none text-lg font-bold text-white w-full py-2 mt-6 cursor-pointer rounded-sm" type="submit" value="Complete Registration" />
 
             </form>
 
             </div>
             
+        </div>
+        </div>
         </div>
     );
 };

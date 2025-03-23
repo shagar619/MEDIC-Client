@@ -22,7 +22,7 @@ const Dashboard = () => {
 
 <div>
 
-<div className="container mx-auto">
+<div className="">
 
 
 <div className="flex text-slate-300">

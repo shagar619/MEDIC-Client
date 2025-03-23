@@ -63,9 +63,9 @@ const Navbar = () => {
 
     return (
 
-<div className="bg-blue-600 bg-opacity-25 shadow-lg text-white fixed w-full top-0 z-50">
+<div className="bg-blue-500 bg-opacity-25 shadow-lg text-white fixed w-full top-0 z-50">
 
-<div className="navbar my-2">
+<div className="navbar my-3">
     <div className="navbar-start">
         <div className="dropdown">
         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -100,15 +100,15 @@ const Navbar = () => {
     {
         user ? 
         <div className="flex items-center gap-6 ">
-            <h3 className="text-xl font-bold">{user.email}</h3>
+            <h3 className="text-2xl font-bold transition hover:scale-110 hover:text-blue-600">{user.email}</h3>
             <button 
             onClick={handleLogOut}
-            className="btn bg-blue-600 text-white text-xl font-bold border-none">Sign Out</button>
+            className="btn bg-blue-500 text-white text-xl font-bold border-none rounded-sm">Sign Out</button>
         </div>
         : 
         <>
-        <Link className="underline text-2xl font-bold transition hover:scale-110 hover:text-warning" to="/signup">Register</Link>
-        <Link to="/signin"><button className="btn bg-blue-600 text-white text-xl font-bold border-none">Sign In</button></Link>
+        <Link className="underline text-blue-500 text-2xl font-bold transition hover:scale-110 hover:text-warning" to="/signup">Register</Link>
+        <Link to="/signin"><button className="btn bg-blue-500 text-white text-xl rounded-sm font-bold border-none">Sign In</button></Link>
         </>
     }
 

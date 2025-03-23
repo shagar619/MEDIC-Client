@@ -23,8 +23,9 @@ const SignUp = () => {
         createUser(data.email, data.password)
         .then(result => {
             const userInfo = {
-                displayName: data.name,
-                email: data.email
+                name: data.name,
+                email: data.email,
+                creationTime: result.user.metadata.creationTime
             }
             
             // create user entry in the database
@@ -53,23 +54,23 @@ const SignUp = () => {
 
     return (
 
-    <div className="bg-gray-100 py-12">
+    <div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] py-52">
 
     <div 
-    className="bg-cover  w-2/3 mx-auto my-32"
+    className="bg-cover object-cover w-4/5 md:w-3/5 mx-auto"
     style={{backgroundImage: "url('https://i.ibb.co.com/YyF9VqN/v870-tang-38.jpg')", boxShadow: '5px 5px 5px 5px rgba(0, 0, 0, 0.25)'}}>
 
             <Helmet>
                 <title>MEDIC | Sign Up</title>
             </Helmet>
 
-            <div className="w-1/2 mx-auto py-12 lg:py-[300px]">
+            <div className="w-1/2 mx-auto py-24">
 
             <div>
 
-            <h3 className="text-center text-5xl underline font-bold text-[#007f5f] uppercase">Sign Up</h3>
-            <h1 className="text-4xl font-bold my-8 text-center text-[#4361ee]">Start for free Today</h1>
-            <p className="text-base text-[#007f5f] font-normal text-center mb-12">Access to all features. No credit card required.</p>
+            <h3 className="text-center text-3xl underline font-bold text-[#007f5f] uppercase">Sign Up</h3>
+            <h1 className="text-4xl font-bold my-8 text-center text-[#07332F]">Start for free Today</h1>
+            <p className="text-lg text-[#007f5f] font-normal text-center mb-12">Access to all features. No credit card required.</p>
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -79,7 +80,7 @@ const SignUp = () => {
                         </div>
                         <input 
                         {...register("name", { required: true })}
-                        type="text" name="name" placeholder="Enter Your Name" className="input input-bordered w-full" />
+                        type="text" name="name" placeholder="Enter Your Name" className="input input-bordered w-full border-none rounded-sm" />
                         {errors.name && <span className="text-red-600">Name is required</span>}
                     </label>   
 
@@ -89,7 +90,7 @@ const SignUp = () => {
                         <div className="label">
                            <span className="label-text text-lg font-normal">E-mail *</span>
                         </div>
-                        <input type="email" name="email" placeholder="Enter Your E-mail" className="input input-bordered w-full" />
+                        <input type="email" name="email" placeholder="Enter Your E-mail" className="input input-bordered w-full border-none rounded-sm" />
                         {errors.email && <span className="text-red-600">Email is required</span>}
                     </label>
 
@@ -105,7 +106,7 @@ const SignUp = () => {
                                 maxLength: 20,
                                 pattern: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])(?=.*[a-z])/
                             })}
-                        type="password" name="password" placeholder="Enter Your Password" className="input input-bordered w-full" />
+                        type="password" name="password" placeholder="Enter Your Password" className="input input-bordered w-full border-none rounded-sm" />
 
                         {errors.password?.type === 'required' && <p className="text-red-600">Password is required</p>}
                                 {errors.password?.type === 'minLength' && <p className="text-red-600">Password must be 6 characters</p>}
@@ -116,7 +117,7 @@ const SignUp = () => {
 
 
                     <input 
-                    className="bg-[#3a86ff] btn text-xl font-bold text-white w-full py-2 mt-6 rounded cursor-pointer" type="submit" value="Sign Up" />
+                    className="bg-[#07332F] btn text-xl font-bold text-white w-full py-2 mt-6 rounded-sm cursor-pointer" type="submit" value="Sign Up" />
 
                     </form>
 
