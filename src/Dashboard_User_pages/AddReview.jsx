@@ -45,7 +45,7 @@ const AddReview = () => {
     }
 
     return (
-        <div className="bg-slate-100 pb-56">
+        <div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] pb-56">
 
             <Helmet>
                 <title>MEDIC | DASHBOARD | USER | ADD REVIEW</title>
@@ -79,11 +79,11 @@ const AddReview = () => {
                     <textarea 
                     {...register('comments', { required: true })}
                     name="comments"
-                    className="textarea textarea-bordered h-32 text-lg" placeholder="Share Your Experience....."></textarea>
+                    className="textarea textarea-bordered h-32 text-lg rounded-sm" placeholder="Share Your Experience....."></textarea>
                     {errors.name && <span className="text-red-600">Contact Details is required</span>}
                 </label>
 
-                <p className="text-center my-12"><button className="btn bg-orange-700 text-white text-lg font-bold uppercase">Submit Review</button></p>
+                <p className="text-center my-12"><button className="btn bg-[#07332F] text-white text-lg font-bold rounded-sm uppercase">Submit Review</button></p>
 
             </form>
 

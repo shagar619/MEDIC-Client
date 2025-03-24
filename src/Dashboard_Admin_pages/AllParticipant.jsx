@@ -67,18 +67,18 @@ const AllParticipant = () => {
 
 
     return (
-        <div className="bg-slate-100 pb-56 pt-16">
+        <div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] pb-56 pt-16">
 
             <Helmet>
                 <title>MEDIC | DASHBOARD | ADMIN | ALL PARTICIPANT</title>
             </Helmet>
             
-            <h2 className="text-center text-5xl font-bold text-blue-600 my-8 uppercase">Manage All Users</h2>
-            <p className="text-center text-xl font-medium text-green-500 mb-28">Access and manage user profiles with ease. View details, update information, and maintain <br /> a seamless experience for all participants and organizers</p>
+            <h2 className="text-center text-5xl font-bold text-[#07332F] my-8 uppercase">Manage All Users</h2>
+            <p className="text-center text-xl font-medium text-gray-500 mb-28">Access and manage user profiles with ease. View details, update information, and maintain <br /> a seamless experience for all participants and organizers</p>
 
-        <div className="bg-white p-12 mx-36">
+        <div className="bg-white rounded-sm shadow-xl p-12 mx-12 md:mx-24 lg:mx-56">
 
-            <h2 className="text-[#151515] text-[32px] font-bold mb-8">Total Users : {users.length}</h2>
+            <h2 className="text-[#151515] text-3xl font-bold mb-8 uppercase">Total Users : {users.length}</h2>
 
             {/* table */}
 
@@ -87,7 +87,7 @@ const AllParticipant = () => {
         <table className="table w-full">
 
     {/* head */}
-        <thead className="bg-blue-600 text-lg text-white font-semibold uppercase">
+        <thead className="bg-[#07332F] text-lg text-white font-semibold uppercase">
             <tr>
                 <th>#</th>
                 <th>Name</th>
@@ -101,7 +101,7 @@ const AllParticipant = () => {
 
     {
         users.map((user, idx) => 
-        <tr key={idx} className="text-[#737373] text-base font-normal hover">
+        <tr key={idx} className="text-[#737373] text-base font-medium hover">
             <th>{idx + 1}</th>
             <td>{user.name}</td>
             <td>{user.email}</td>

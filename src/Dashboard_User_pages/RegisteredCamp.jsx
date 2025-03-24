@@ -5,6 +5,7 @@ import { VscFeedback } from "react-icons/vsc";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import SectionTitle from "../shared/SectionTitle";
 
 
 
@@ -44,13 +45,13 @@ const RegisteredCamp = () => {
     }
 
     return (
-        <div className="pt-24 bg-slate-100 pb-56">
+        <div className="pt-24 bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] pb-56">
 
         <Helmet>
             <title>MEDIC | DASHBOARD | USER | REGISTERED CAMPS</title>
-        </Helmet>    
+        </Helmet>
 
-            <h2 className="text-center text-5xl font-bold text-blue-600 my-12 uppercase">Your Camp Registration History</h2>
+            <h2 className="text-center text-5xl font-bold text-[#07332F] my-12 uppercase">Your Camp Registration History</h2>
             <p className="text-xl font-medium text-center text-gray-500">Keep track of all the medical camps you've registered for. View past and upcoming camps, <br /> their details, and manage your health journey effortlessly</p>
 
             <div className="flex justify-evenly items-center mb-8 mt-24">
@@ -59,10 +60,10 @@ const RegisteredCamp = () => {
             <h1 className="text-[#151515] text-[32px] font-bold uppercase">Total Camp Fees : $ {totalCampFees}</h1>
 
         { participantCamp.length ? <Link to="/dashboard/payment">
-            <button className="btn bg-green-600 text-white text-xl font-semibold">Pay</button>
+            <button className="btn bg-[#07332F] text-white text-xl font-semibold rounded-sm">Pay</button>
         </Link> 
         :
-        <button disabled className="btn bg-green-600 text-white text-xl font-semibold">Pay</button>
+        <button disabled className="btn bg-[#07332F] text-white text-xl font-semibold rounded-sm">Pay</button>
         }
     </div>
 
@@ -72,7 +73,7 @@ const RegisteredCamp = () => {
     <div className="overflow-x-auto">
     <table className="table w-full">
     {/* head */}
-    <thead className="bg-blue-600 text-lg text-white font-semibold">
+    <thead className="bg-[#07332F] text-lg text-white font-semibold">
     <tr>
         <th>#</th>
         <th>Camp Name</th>
@@ -87,7 +88,7 @@ const RegisteredCamp = () => {
 
         {
             participantCamp.map((item, idx) => 
-            <tr key={item._id} className="text-[#737373] text-base font-normal hover">
+            <tr key={item._id} className="text-[#737373] text-base font-medium hover">
                 <th>
                     {idx + 1}
                 </th>

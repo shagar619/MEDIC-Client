@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import { GrUpdate } from "react-icons/gr";
@@ -12,11 +12,12 @@ const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_ke
 
 const UpdateCamp = () => {
 
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { _id ,campName, campFees, location, dateTime, description, image, healthcareProfessional } = useLoaderData();
 
     const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
+    const navigate = useNavigate();
 
 
     const onSubmit = async (data) => {
@@ -51,12 +52,14 @@ const UpdateCamp = () => {
                     title: `${data.campName} is updated to the camp.`,
                     showConfirmButton: true,
                 });
+                reset();
+                navigate('/dashboard/manageCamp');
             }
         }
     };
 
     return (
-        <div className="pb-56 mt-24">
+        <div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] pb-56 pt-12">
 
             <Helmet>
                 <title>MEDIC | DASHBOARD | ADMIN | MANAGE CAMP | UPDATE CAMP</title>
@@ -65,12 +68,12 @@ const UpdateCamp = () => {
             <h2 className="text-center text-5xl font-bold text-blue-600 my-12 uppercase">Update Camp Details</h2>
             <p className="text-center text-xl font-medium text-green-500 mb-24">Modify and refine the details of your medical camps with ease. Keep your listings accurate and <br /> up-to-date to provide the best experience for participants</p>
 
-        <div className="bg-[#F3F3F3] p-12 mx-32">
+        <div className="bg-white rounded-sm shadow-xl mx-6 md:mx-24 p-12 lg:mx-56">
 
         <form onSubmit={handleSubmit(onSubmit)}>
 
 
-        <div className="flex justify-between items-center gap-6">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
 
         {/* Camp name */}
             <label className="form-control w-full">
@@ -80,7 +83,7 @@ const UpdateCamp = () => {
                     <input 
                     {...register('campName', { required: true })}
                     defaultValue={campName}
-                    type="text" name="campName" placeholder="Enter Camp Name" className="input input-bordered w-full" />
+                    type="text" name="campName" placeholder="Enter Camp Name" className="input input-bordered w-full rounded-sm" />
                     {errors.name && <span className="text-red-600">Camp Name is required</span>}
             </label>
             
@@ -92,7 +95,7 @@ const UpdateCamp = () => {
                     <input 
                     {...register('campFees', { required: true })}
                     defaultValue={campFees}
-                    type="number" name="campFees" placeholder="Enter Camp Fees" className="input input-bordered w-full" />
+                    type="number" name="campFees" placeholder="Enter Camp Fees" className="input input-bordered w-full rounded-sm" />
                     {errors.name && <span className="text-red-600">Camp Fees is required</span>}
             </label>
 
@@ -100,7 +103,7 @@ const UpdateCamp = () => {
 
 
 
-    <div className="flex justify-between items-center gap-6">
+    <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
 
 
         {/* Date & Time */}
@@ -111,7 +114,7 @@ const UpdateCamp = () => {
                     <input 
                     {...register('dateTime', { required: true })}
                     defaultValue={dateTime}
-                    type="datetime-local" name="dateTime" placeholder="Enter Date & Time" className="input input-bordered w-full" />
+                    type="datetime-local" name="dateTime" placeholder="Enter Date & Time" className="input input-bordered w-full rounded-sm" />
                     {errors.name && <span className="text-red-600">Date & Time is required</span>}
             </label>
 
@@ -124,7 +127,7 @@ const UpdateCamp = () => {
                     <input 
                     {...register('location', { required: true })}
                     defaultValue={location}
-                    type="text" name="location" placeholder="location" className="input input-bordered w-full" />
+                    type="text" name="location" placeholder="location" className="input input-bordered w-full rounded-sm" />
                     {errors.name && <span className="text-red-600">Location is required</span>}
             </label>
 
@@ -139,7 +142,7 @@ const UpdateCamp = () => {
                     <input 
                     {...register('healthcareProfessional', { required: true })}
                     defaultValue={healthcareProfessional}
-                    type="text" name="healthcareProfessional" placeholder="Healthcare Professional" className="input input-bordered w-full" />
+                    type="text" name="healthcareProfessional" placeholder="Healthcare Professional" className="input input-bordered w-full rounded-sm" />
                     {errors.name && <span className="text-red-600">Healthcare Professional Name is required</span>}
             </label>
 
@@ -153,18 +156,18 @@ const UpdateCamp = () => {
                 {...register('description', { required: true })}
                 defaultValue={description}
                 name="description"
-                className="textarea textarea-bordered h-24" placeholder="Description"></textarea>
+                className="textarea textarea-bordered h-24 rounded-sm" placeholder="Description"></textarea>
                 {errors.name && <span className="text-red-600">Description is required</span>}
             </label>
 
             <div className="form-control w-full my-6">
                 <input 
                 {...register('image', { required: true })}
-                type="file" className="file-input w-full max-w-xs" />
+                type="file" className="file-input w-full max-w-xs rounded-sm" />
                 {errors.name && <span className="text-red-600">Image is required</span>}
             </div>
 
-            <button className="btn bg-blue-700 text-xl font-semibold text-white">
+            <button className="btn bg-[#07332F] text-lg font-semibold text-white rounded-sm uppercase">
                 Update Camp <GrUpdate className="ml-4"></GrUpdate>
             </button>
 

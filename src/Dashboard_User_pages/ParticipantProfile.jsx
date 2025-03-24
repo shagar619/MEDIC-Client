@@ -37,42 +37,18 @@ const ParticipantProfile = () => {
             <h2 className="text-[#07332F] text-5xl font-semibold mt-12 mb-24 uppercase">
                 <span>Hi, Welcome </span>
                 {
-                    participant?.displayName || participant.name ? participant.displayName || participant.name : "Back"
+                    participant.name ? participant.name : "Back"
                 }
             </h2>
 
-            <div className="flex flex-col lg:flex-row">
 
-                <div className="bg-green-200 flex-1 w-full py-24 flex flex-col justify-center items-center">
-                    <div className="bg-white h-52 w-52 rounded-full">
-                        <img className="w-full h-full transition hover:scale-110 rounded-full" src={participant?.image} alt="" />
-                    </div>
-                    <h3 className="text-[#151515] text-4xl font-semibold mt-12">{participant.displayName}</h3>
-                </div>
-
-                <div className="bg-blue-100 flex-1 w-full pt-24 uppercase">
-                    <h3 className="text-[#151515] text-[40px] font-semibold mb-8 ml-4 md:ml-24">Your Activities</h3>
-
-                    <h4 className="flex items-center gap-4 text-[#0088FE] text-2xl font-semibold ml-4 md:ml-24"><MdJoinFull className="text-6xl"></MdJoinFull>Total Camp Join : {stats.length}</h4>
-
-                    <h4 className="flex items-center gap-4 text-[#00C4A1] text-2xl font-semibold ml-4 md:ml-24"><IoWalletSharp className="text-6xl"></IoWalletSharp>Total Camp Fees : {totalFees}</h4>
-
-                </div>
-
-            </div>
-
-            <p className="text-center mt-12"><Link to="/dashboard/updateUser"><button 
-            className="btn text-white text-lg font-semibold bg-[#07332F] uppercase">Update Profile</button></Link></p>
-
-
-
-            <div className="w-10/12 mx-auto bg-white rounded-sm shadow-lg">
+            <div className="md:w-10/12 md:mx-auto bg-white rounded-sm shadow-lg mx-">
                 <div className="bg-[#07332F] h-24 rounded-t-sm"></div>
 
             <div className="px-8 pb-24">
 
                 <div className="relative left-6 -top-10">
-                    <img class="inline-block size-24 rounded-full ring-2 ring-[#07332F] transition hover:scale-110" src="https://i.ibb.co.com/21nvy17z/Shagar619-removebg-preview-1.png" alt=""/>
+                    <img class="inline-block size-24 rounded-full ring-2 ring-[#07332F] transition hover:scale-110" src={participant?.image} alt=""/>
                     <h2 className="text-black text-3xl font-bold mt-6 uppercase">{participant.name}</h2>
                     <p className="text-xl font-medium text-gray-600">{user.email}</p>
                 </div>

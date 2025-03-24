@@ -77,23 +77,23 @@ const ManageRegisteredCamp = () => {
     return (
 
 
-<div className="bg-slate-100 pb-56 pt-16">
+<div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] pb-56 pt-12">
 
     <Helmet>
         <title>MEDIC | DASHBOARD | ADMIN | MANAGE REGISTERED CAMP</title>
     </Helmet>
 
-<h2 className="text-center text-5xl font-bold text-blue-600 my-12 uppercase">Manage Registered Camps</h2>
-<p className="text-center text-xl font-medium text-green-500 mb-24">View and organize all participant registrations for your medical camps.Easily track attendance, <br /> update details, and ensure a smooth experience for all attendees</p>
+<h2 className="text-center text-5xl font-bold text-[#07332F] my-12 uppercase">Manage Registered Camps</h2>
+<p className="text-center text-xl font-medium text-gray-500 mb-24">View and organize all participant registrations for your medical camps.Easily track attendance, <br /> update details, and ensure a smooth experience for all attendees</p>
 
 
 
-<div className="bg-white p-12 mx-36">
+<div className="bg-white rounded-sm shadow-xl p-12 mx-6 md:mx-24 lg:mx-40">
 
 <div className="overflow-x-auto">
 <table className="table w-full">
 {/* head */}
-<thead className="bg-blue-600 text-lg text-white font-semibold uppercase">
+<thead className="bg-[#07332F] text-lg text-white font-semibold uppercase">
 <tr>
     <th>#</th>
     <th>E-mail</th>
@@ -109,7 +109,7 @@ const ManageRegisteredCamp = () => {
 
     {
         payments.map((item, idx) => 
-        <tr key={item._id} className="text-[#737373] text-base font-normal hover">
+        <tr key={item._id} className="text-[#737373] text-base font-medium hover">
             <th>
                 {idx + 1}
             </th>

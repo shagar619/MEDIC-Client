@@ -113,11 +113,11 @@ const CheckOutForm = () => {
     }
 
     return (
-        <div className="w-8/12 mx-auto py-36 mb-32">
+        <div className="w-8/12 mx-auto py-36 pb-32">
 
             <form onSubmit={handleSubmit}>
 
-                <CardElement className="border p-6">
+                <CardElement className="border p-6 bg-white">
                 options={{
                     style: {
                         base: {
@@ -136,12 +136,12 @@ const CheckOutForm = () => {
 
                 <button 
                 disabled={!stripe || !clientSecret}
-                className="btn bg-blue-600 text-white text-xl font-bold my-8" type="submit">
+                className="btn bg-[#07332F] text-white text-xl font-bold my-8 rounded-sm" type="submit">
                 Pay
             </button>
 
             <p className="text-red-600">{error}</p>
-            {transactionId && <p className="text-green-600 text-lg font-medium"> Your transaction id : <span className="text-xl font-bold">{transactionId}</span> </p>}
+            {transactionId && <p className="text-[#07332F] text-lg font-medium"> Your transaction id : <span className="text-xl font-bold">{transactionId}</span> </p>}
 
             </form>
             

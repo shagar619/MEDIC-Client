@@ -7,6 +7,7 @@ import useAxiosPublic from "../hooks/useAxiosPublic";
 import useAxiosSecure from "../hooks/useAxiosSecure";
 import Swal from "sweetalert2";
 import useAuth from "../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
@@ -19,6 +20,7 @@ const UpdateUser = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
+    const navigate = useNavigate();
 
 
         const onSubmit = async (data) => {
@@ -53,12 +55,13 @@ const UpdateUser = () => {
                         showConfirmButton: true,
                     });
                     reset();
+                    user.role === 'admin' ? navigate('/dashboard/organizerProfile') : navigate('/dashboard/userProfile')
                 }
             }
         };
 
     return (
-        <div className="bg-slate-100 pb-56">
+        <div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] pb-56">
 
             <Helmet>
                 <title>MEDIC | DASHBOARD | USER | UPDATE PROFILE</title>
@@ -69,7 +72,7 @@ const UpdateUser = () => {
             subHeading={'Keep your profile up to date by editing your name, email, and other details. Ensure accurate information for a seamless medical camp experience'}
             ></SectionTitle>
 
-            <div className="bg-blue-100 p-12 mx-32">
+            <div className="bg-white p-12 mx-6 md:mx-32 lg:mx-56 shadow-xl">
 
             <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -82,8 +85,8 @@ const UpdateUser = () => {
                         </div>
                             <input 
                             {...register('name')}
-                            defaultValue={participant.displayName}
-                            type="text" name="name"  className="input input-bordered w-full" />
+                            defaultValue={participant.name}
+                            type="text" name="name"  className="input input-bordered w-full rounded-sm" />
                     </label>
 
                     {/* user email */}
@@ -93,7 +96,7 @@ const UpdateUser = () => {
                         </div>
                             <input 
                             {...register('email')}
-                            type="email" name="email" value={participant.email} className="input input-bordered w-full" />
+                            type="email" name="email" value={participant.email} className="input input-bordered w-full rounded-sm" />
                     </label>
 
                 </div>
@@ -107,7 +110,7 @@ const UpdateUser = () => {
                         </div>
                             <input 
                             {...register('phoneNumber', { required: true })}
-                            type="number" name="phoneNumber" placeholder="Enter Phone Number" className="input input-bordered w-full" />
+                            type="number" name="phoneNumber" placeholder="Enter Phone Number" className="input input-bordered w-full rounded-sm" />
                             {errors.name && <span className="text-red-600">Phone Number is required</span>}
                     </label>
 
@@ -119,7 +122,7 @@ const UpdateUser = () => {
                         <textarea 
                             {...register('contact', { required: true })}
                             name="contact"
-                            className="textarea textarea-bordered h-24" placeholder="Enter Contact Details"></textarea>
+                            className="textarea textarea-bordered h-24 rounded-sm" placeholder="Enter Contact Details"></textarea>
                             {errors.name && <span className="text-red-600">Contact Details is required</span>}
                     </label>
 
@@ -128,14 +131,13 @@ const UpdateUser = () => {
                 <div className="form-control w-full my-6">
                 <input 
                 {...register('image', { required: true })}
-                type="file" className="file-input w-full max-w-xs" />
+                type="file" className="file-input w-full max-w-xs rounded-sm" />
                 {errors.name && <span className="text-red-600">Image is required</span>}
             </div>
 
             <button 
-            style={{'background': 'linear-gradient(90.00deg, rgb(131, 93, 35),rgb(181, 129, 48) 100%)'}}
-            className="btn text-xl font-semibold text-white">
-                Update Camp <GrUpdate className="ml-4"></GrUpdate>
+            className="btn bg-[#07332F] text-lg font-semibold text-white rounded-sm uppercase">
+                Update Profile <GrUpdate className="ml-4"></GrUpdate>
             </button>
 
             </form>
