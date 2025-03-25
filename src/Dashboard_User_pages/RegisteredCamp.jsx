@@ -68,7 +68,7 @@ const RegisteredCamp = () => {
     </div>
 
 
-    <div className="bg-white p-12 mx-36">
+    <div className="bg-white p-12 mx-6 md:mx-24 lg:mx-56 rounded-sm shadow-xl">
 
     <div className="overflow-x-auto">
     <table className="table w-full">

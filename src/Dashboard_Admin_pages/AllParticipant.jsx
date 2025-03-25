@@ -19,17 +19,30 @@ const AllParticipant = () => {
     });
 
 
+
     const handleMakeAdmin = (user) => {
-        axiosSecure.patch(`/users/admin/${user._id}`)
-        .then(res => {
-            if(res.data.modifiedCount > 0){
-                refetch();
-                Swal.fire({
-                    position: "middle",
-                    icon: "success",
-                    title: `${user.name} is an Admin Now!`,
-                    showConfirmButton: true,
-                });
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You want to make Admin this user!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, make Admin!"
+        }).then((result) => {
+            if(result.isConfirmed) {
+                axiosSecure.patch(`/users/admin/${user._id}`)
+                .then(res => {
+                    if(res.data.modifiedCount > 0){
+                        refetch();
+                        Swal.fire({
+                            title: "Admin!",
+                            text: "Your file has been deleted.",
+                            icon: "success"
+                        });
+                        
+                    }
+                })
             }
         })
     }

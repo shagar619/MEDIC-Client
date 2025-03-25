@@ -27,7 +27,7 @@ const PaymentHistory = () => {
             <h2 className="text-center text-5xl font-bold text-[#07332F] uppercase">Your Payment History</h2>
             <p className="text-center text-xl font-medium text-gray-500 mt-12 mb-28">Review all your completed transactions for medical camps. Stay organized with detailed records <br /> of your payments and ensure a hassle-free experience</p>
 
-            <div className="bg-white p-12 mx-36">
+            <div className="bg-white p-12 rounded-sm shadow-xl mx-12 md:mx-24 lg:mx-56">
 
         <h1 className="text-[#151515] text-[32px] font-bold uppercase mb-8">Total Payments : {payments.length}</h1>
 
