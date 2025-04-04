@@ -17,8 +17,8 @@ const CampDetails = () => {
         <div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] py-20">
             <SectionTitle
             heading={'Medical Camp Details'}
-            subHeading={'Get comprehensive information about the selected medical camp, including date, location, healthcare professionals, and services offered. Register now to secure your spot and receive quality healthcare'}
-            ></SectionTitle>
+            subHeading={'Get comprehensive information about the selected medical camp, including date, location, healthcare professionals, and services offered. Register now to secure your spot and receive quality healthcare'}>
+            </SectionTitle>
 
         <div className="">
 
