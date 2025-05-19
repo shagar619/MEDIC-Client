@@ -2,60 +2,68 @@ import img1 from './../assets/services/64x64x1.webp';
 import img2 from './../assets/services/64x64x2.webp';
 import img3 from './../assets/services/64x64x3.webp';
 import img4 from './../assets/services/64x64x4.webp';
+import '../CSS/OurServices.css';
 
 const OurServicePage = () => {
     return (
         <div 
-        style={{backgroundImage: `url('https://i.ibb.co.com/fVKQQHKd/pharmacy-store-customer-buying-vitamin-paying-drugstore-checkout-pharmaceutical-assistant-selling-su.jpg')`}}
-        className='py-32 my-16 bg-cover relative bg-fixed'>
+        style={{backgroundImage: `url('https://i.ibb.co.com/cSGNRs2Z/services-bg.jpg')`}}
+        className='bg-cover object-cover'>
 
-        <div className='transition hover:scale-110 inset-0 bg-black bg-opacity-40 backdrop-blur-md py-16 w-10/12 mx-auto'>
+        <div className='w-10/12 mx-auto py-24'>
 
-        <h2 className="text-6xl font-bold text-white text-center">Our Services</h2>
-        <p className="text-white mt-12 mb-8 text-center text-xl">
-        We offer a range of medical services to ensure your health and well-being. 
-        Our expert team is <br /> dedicated to providing high-quality care.
+        <h2 className="text-5xl font-bold text-black text-center">Our Healthcare Services</h2>
+        <p className="text-gray-600 my-8 text-center text-xl font-medium">
+        We offer a range of medical services to ensure your health and well-being. <br /> 
+        Our expert team is dedicated to providing high-quality care.
         </p>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-9/12 mx-auto my-24 text-white'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-10/12 mx-auto mt-24 text-black'>
 
-            <div className='flex items-center gap-4'>
+
+            <div 
+            className='flex items-center gap-4 bg-white shadow-md p-12 rounded-md rounded-br-[80px]'>
                 <div>
                     <img src={img1} alt="" />
                 </div>
-                <div className='space-y-3'>
-                    <h3 className='text-4xl font-bold'>Emergency Care</h3>
-                    <p className='text-lg font-medium'>quick and effective emergency medical assistance 24/7.</p>
+                <div className='space-y-4'>
+                    <h3 className='text-3xl font-bold'>Emergency Care</h3>
+                    <p className='text-base font-normal'>For any kind emergency needed quick and effective emergency medical assistance 24/7.</p>
+                    <button className='text-[#0CBBB6] font-bold'>Read More + </button>
                 </div>
             </div>
 
-            <div className='flex items-center gap-4'>
+
+            <div className='flex items-center gap-4 bg-white shadow-md p-12 rounded-md rounded-br-[80px]'>
                 <div>
                     <img src={img2} alt="" />
                 </div>
-                <div className='space-y-3'>
-                    <h3 className='text-4xl font-bold'>Operation Theater</h3>
-                    <p className='text-lg font-medium'>tate-of-the-art surgical facilities for critical procedures.</p>
+                <div className='space-y-4'>
+                    <h3 className='text-3xl font-bold'>Operation Theater</h3>
+                    <p className='text-base font-normal'>tate-of-the-art surgical facilities for critical procedures with world class treatment.</p>
+                    <button className='text-[#0CBBB6] font-bold'>Read More + </button>
                 </div>
             </div>
 
-            <div className='flex items-center gap-4'>
+            <div className='flex items-center gap-4 bg-white shadow-md p-12 rounded-md rounded-br-[80px]'>
                 <div>
                     <img src={img3} alt="" />
                 </div>
-                <div className='space-y-3'>
-                    <h3 className='text-4xl font-bold'>Blood Test</h3>
-                    <p className='text-lg font-medium'>Accurate and reliable blood testing services for diagnostics.</p>
+                <div className='space-y-4'>
+                    <h3 className='text-3xl font-bold'>Blood Test</h3>
+                    <p className='text-base font-normal'>Accurate and reliable blood testing services for diagnostics.</p>
+                    <button className='text-[#0CBBB6] font-bold'>Read More + </button>
                 </div>
             </div>
 
-            <div className='flex items-center gap-4'>
+            <div className='flex items-center gap-4 bg-white shadow-md p-12 rounded-md rounded-br-[80px]'>
                 <div>
                     <img src={img4} alt="" />
                 </div>
-                <div className='space-y-3'>
-                    <h3 className='text-4xl font-bold'>Pharmacy</h3>
-                    <p className='text-lg font-medium'>Well-stocked pharmacy with prescribed and over-the-counter medicines.</p>
+                <div className='space-y-4'>
+                    <h3 className='text-3xl font-bold'>Pharmacy</h3>
+                    <p className='text-base font-normal'>Well-stocked pharmacy with prescribed and over-the-counter medicines.</p>
+                    <button className='text-[#0CBBB6] font-bold'>Read More + </button>
                 </div>
             </div>
 

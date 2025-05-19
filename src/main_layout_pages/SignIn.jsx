@@ -8,6 +8,7 @@ import useAuth from "../hooks/useAuth";
 import Swal from "sweetalert2";
 
 
+
 const SignIn = () => {
 
     const navigate = useNavigate();
@@ -58,6 +59,9 @@ const SignIn = () => {
     }
 
     return (
+
+        <div>
+
         <div className="bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')] py-52">
 
             <div     
@@ -67,7 +71,6 @@ const SignIn = () => {
             <Helmet>
                 <title>MEDIC | Sign In</title>
             </Helmet>
-
 
             <div 
             className="w-1/2 mx-auto py-24">
@@ -134,6 +137,8 @@ const SignIn = () => {
 
             </div>
             
+        </div>
+
         </div>
     );
 };
