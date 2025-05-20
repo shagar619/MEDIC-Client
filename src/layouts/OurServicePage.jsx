@@ -6,19 +6,20 @@ import '../CSS/OurServices.css';
 
 const OurServicePage = () => {
     return (
-        <div 
-        style={{backgroundImage: `url('https://i.ibb.co.com/cSGNRs2Z/services-bg.jpg')`}}
-        className='bg-cover object-cover'>
 
-        <div className='w-10/12 mx-auto py-24'>
+        <div className='mb-36'>
 
         <h2 className="text-5xl font-bold text-black text-center">Our Healthcare Services</h2>
-        <p className="text-gray-600 my-8 text-center text-xl font-medium">
-        We offer a range of medical services to ensure your health and well-being. <br /> 
+        <p className="text-gray-600 mt-8 text-center text-xl font-medium">
+        We offer a range of medical services to ensure your health and well-being. <br />
         Our expert team is dedicated to providing high-quality care.
         </p>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-10/12 mx-auto mt-24 text-black'>
+        <div className=''>
+
+        <div className='w-10/12 lg:w-8/12 mx-auto'>
+
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 mt-24 text-black'>
 
 
             <div 
@@ -72,7 +73,8 @@ const OurServicePage = () => {
 
     </div>
     </div>
-    );
+    </div>
+);
 };
 
 export default OurServicePage;

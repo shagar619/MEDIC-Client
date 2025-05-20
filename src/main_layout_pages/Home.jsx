@@ -1,12 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import OurServicePage from "../layouts/OurServicePage";
-import CarouselBanner from "../main_layout_components/CarouselBanner";
-import DoctorImg from "../main_layout_components/DoctorImg";
 import PopularCamp from "../main_layout_components/PopularCamp";
-import DoctorsBanner from "../main_layout_components/DoctorsBanner";
-import ChooseUs from "../main_layout_components/ChooseUs";
-import Contact from "../main_layout_components/Contact";
-import MidPart from "../main_layout_components/MidPart";
+import Hero from "../main_layout_components/Hero";
+import CampManagement from "../main_layout_components/CampManagement";
+import OurMission from "../main_layout_components/OurMission";
+import ContactForm from "../main_layout_components/ContactForm";
+import Testimonials from "../main_layout_components/Testimonials";
+import Statistics from "../main_layout_components/Statistics";
 
 // bg-white bg-[url('https://www.transparenttextures.com/patterns/brushed-alum.png')]
 
@@ -17,14 +17,14 @@ const Home = () => {
             <Helmet>
                 <title>MEDIC | HOME</title>
             </Helmet>
-            <CarouselBanner></CarouselBanner>
-            <MidPart></MidPart>
-            <DoctorImg></DoctorImg>
+            <Hero></Hero>
+            <CampManagement></CampManagement>
+            <OurMission></OurMission>
             <PopularCamp></PopularCamp>
             <OurServicePage></OurServicePage>
-            <DoctorsBanner></DoctorsBanner>
-            <ChooseUs></ChooseUs>
-            <Contact></Contact>
+            <Statistics></Statistics>
+            <Testimonials></Testimonials>
+            <ContactForm></ContactForm>
         </div>
     );
 };

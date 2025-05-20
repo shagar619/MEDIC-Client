@@ -1,0 +1,10 @@
+.hero-gradient {
+    background: linear-gradient(90deg, rgba(24, 144, 255, 0.1) 0%, rgba(19, 194, 194, 0.1) 100%);
+}
+
+.text-gradient {
+    background-image: linear-gradient(to right, #065f46, #0f766e); /* Replace with your actual colors */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}

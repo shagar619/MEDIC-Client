@@ -12,13 +12,16 @@ const PopularCamp = () => {
 
     return (
 
-        <div className="">
-        <div className="">
+        <div className="mb-24">
 
-            <h1 className="text-center text-5xl font-bold mb-14 pt-36 text-[#07332F] uppercase">Explore Our Popular Medical Camps</h1>
-            <p className="text-center text-xl font-medium text-gray-500 mb-24">Discover the most sought-after medical camps designed to cater to diverse healthcare needs. From specialized treatments to wellness check-ups, <br /> these camps are highly rated by participants. Join now and take a step toward better health!</p>
+        <h1 className="text-center text-5xl font-bold mb-14 pt-36 text-[#07332F]">Explore Our Popular Medical Camps</h1>
+        <p className="text-center text-xl font-medium text-gray-500 mb-24">Discover the most sought-after medical camps designed to cater to diverse healthcare needs.  From specialized treatments <br /> to wellness check-ups, these camps are highly rated by participants. Join now and take a step toward better health!</p>
 
-<div className="w-9/12 mx-auto">
+        <div style={{backgroundImage: `url('https://i.ibb.co.com/cSGNRs2Z/services-bg.jpg')`}}
+        className='bg-cover object-cover py-40 bg-no-repeat bg-center bg-fixed'>
+
+
+<div className="w-8/12 mx-auto">
 
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
